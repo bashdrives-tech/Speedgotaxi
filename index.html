@@ -44,15 +44,15 @@
         .fleet-info { padding: 15px; text-align: center; background: #fff; border-top: 1px solid #e2e8f0; }
         .tour-card { background: var(--bg-card); border-radius: 16px; overflow: hidden; margin-bottom: 20px; border: 1px solid #e2e8f0; }
         .tour-img { height: 180px; background-size: cover; background-position: center; position: relative; }
-        .tour-overlay { position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 15px; color: white; }
+        .tour-overlay { position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 15px; color: white; font-weight: bold; }
         .tour-points { margin-bottom: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 15px; }
         .t-point { font-size: 0.75rem; color: var(--text-dark); display: flex; align-items: center; gap: 6px; }
         .t-point i { color: var(--primary-green); font-size: 0.7rem; }
-        .faq-item { background: var(--bg-card); border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 10px; }
+        .faq-item { background: var(--bg-card); border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
         .faq-question { width: 100%; text-align: left; padding: 15px; background: none; border: none; color: var(--text-dark); font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
         .faq-answer { padding: 0 15px 15px; color: var(--text-grey); font-size: 0.9rem; display: none; text-align: left;}
         .faq-item.active .faq-answer { display: block; }
-        .modal { display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); padding: 20px; }
+        .modal { display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); padding: 20px; overflow-y: auto; }
         .modal-content { background: #fff; padding: 25px; border-radius: 15px; max-width: 500px; margin: 40px auto; border-top: 5px solid var(--primary-orange); color: var(--text-dark); }
         .close-modal { color: var(--text-grey); float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
         .sticky-footer { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; display: flex; padding: 10px; gap: 10px; z-index: 9999; border-top: 1px solid #e2e8f0; }
@@ -96,7 +96,6 @@
         <input type="text" id="fromCity" placeholder="Pickup Location">
         <input type="text" id="toCity" placeholder="Drop Location">
         <input type="number" id="manualKm" placeholder="Approximate Distance (KM)">
-        
         <div id="oneway-options" style="display:none; margin: 10px 0 20px; display: flex; justify-content: center; gap: 20px;">
             <label><input type="radio" name="tripType" value="oneway" checked> One Way</label>
             <label><input type="radio" name="tripType" value="round"> Round Trip</label>
@@ -118,10 +117,26 @@
 <section id="fleet" class="container">
     <h3 class="text-center">Our Fleet</h3>
     <div class="fleet-grid">
-        <div class="fleet-card"><img src="dzire.png" class="fleet-img" alt="Dzire"><div class="fleet-info"><h4>Dzire</h4><p>4 Seater</p></div></div>
-        <div class="fleet-card"><img src="aura.png" class="fleet-img" alt="Aura"><div class="fleet-info"><h4>Aura</h4><p>4 Seater</p></div></div>
-        <div class="fleet-card"><img src="innova.png" class="fleet-img" alt="Innova"><div class="fleet-info"><h4>Innova</h4><p>7 Seater</p></div></div>
+        <div class="fleet-card"><img src="dzire.png" class="fleet-img"><div class="fleet-info"><h4>Dzire</h4><p>4 Seater</p></div></div>
+        <div class="fleet-card"><img src="aura.png" class="fleet-img"><div class="fleet-info"><h4>Aura</h4><p>4 Seater</p></div></div>
+        <div class="fleet-card"><img src="etios.png" class="fleet-img"><div class="fleet-info"><h4>Etios</h4><p>4 Seater</p></div></div>
+        <div class="fleet-card"><img src="innova.png" class="fleet-img"><div class="fleet-info"><h4>Innova</h4><p>7 Seater</p></div></div>
+        <div class="fleet-card"><img src="crysta.png" class="fleet-img"><div class="fleet-info"><h4>Crysta</h4><p>7/8 Seater</p></div></div>
+        <div class="fleet-card"><img src="urbania.png" class="fleet-img"><div class="fleet-info"><h4>Urbania</h4><p>13 Seater</p></div></div>
     </div>
+</section>
+
+<section id="tours" class="container">
+    <h3 class="text-center">Top Tour Packages</h3>
+    <div class="tour-card"><div class="tour-img" style="background-image:url('ooty.png');"><div class="tour-overlay"><b>Ooty</b></div></div><div class="tour-points"><div class="t-point"><i class="fas fa-check-circle"></i> Botanical Garden</div><div class="t-point"><i class="fas fa-check-circle"></i> Ooty Lake</div><div class="t-point"><i class="fas fa-check-circle"></i> Doddabetta Peak</div><div class="t-point"><i class="fas fa-check-circle"></i> Rose Garden</div></div><div style="padding:15px;"><a href="https://wa.me/916369353761" class="btn btn-orange">Instant Ooty Booking</a></div></div>
+    <div class="tour-card"><div class="tour-img" style="background-image:url('munnar.png');"><div class="tour-overlay"><b>Munnar</b></div></div><div class="tour-points"><div class="t-point"><i class="fas fa-check-circle"></i> Tea Museum</div><div class="t-point"><i class="fas fa-check-circle"></i> Mattupetty Dam</div><div class="t-point"><i class="fas fa-check-circle"></i> Eravikulam Park</div><div class="t-point"><i class="fas fa-check-circle"></i> Echo Point</div></div><div style="padding:15px;"><a href="https://wa.me/916369353761" class="btn btn-orange">Instant Munnar Booking</a></div></div>
+</section>
+
+<section id="faq" class="container text-center">
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">How do I book a taxi? <span class="faq-icon">+</span></button><div class="faq-answer">Call 6369353761 or use the WhatsApp button for instant booking.</div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Are there any hidden charges? <span class="faq-icon">+</span></button><div class="faq-answer">No hidden charges. Tolls, state permits, and parking are extra.</div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Is it safe for night travel? <span class="faq-icon">+</span></button><div class="faq-answer">Yes, our professional drivers are trained for safe night travel.</div></div>
 </section>
 
 <footer id="contact" class="container text-center" style="padding: 40px 20px; border-top: 1px solid #e2e8f0;">
@@ -139,7 +154,7 @@
 </div>
 
 <div id="modalPrivacy" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('privacy')">&times;</span><h3>Privacy Policy</h3><p>We collect your name and location data solely for providing taxi services.</p></div></div>
-<div id="modalDisclaimer" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('disclaimer')">&times;</span><h3>Disclaimer</h3><p>Fares are estimates. Final fares are based on actual odometer readings. Tolls and parking are extra.</p></div></div>
+<div id="modalDisclaimer" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('disclaimer')">&times;</span><h3>Disclaimer</h3><p>Road distances are manually estimated. Final fares are based on actual odometer readings. Tolls and state permits are extra.</p></div></div>
 
 <script>
 let currentMode = 'city';
@@ -154,13 +169,10 @@ function setCalcMode(mode) {
 }
 
 function calculateFare() {
-    const from = document.getElementById('fromCity').value;
-    const to = document.getElementById('toCity').value;
-    const kmInput = document.getElementById('manualKm').value;
+    const from = document.getElementById('fromCity').value, to = document.getElementById('toCity').value, kmVal = document.getElementById('manualKm').value;
+    if(!from || !to || !kmVal) return alert("Please enter locations and approximate KM");
     
-    if(!from || !to || !kmInput) return alert("Please enter locations and approximate KM");
-    
-    let oneWayDist = parseFloat(kmInput);
+    let oneWayDist = parseFloat(kmVal);
     let estimatedPrice = 0;
     let displayDist = oneWayDist;
     let ratePerKm = parseFloat(document.getElementById('carSelect').value);
@@ -174,7 +186,6 @@ function calculateFare() {
         if (tripType === 'oneway') {
             let billingDist = oneWayDist < 130 ? 130 : oneWayDist;
             estimatedPrice = (billingDist * ratePerKm) + 500;
-            displayDist = oneWayDist;
         } else {
             displayDist = oneWayDist * 2;
             estimatedPrice = (displayDist * 14) + 500;
@@ -189,8 +200,8 @@ function calculateFare() {
 
 function confirmBooking() {
     const name = document.getElementById('custName').value || 'Guest';
-    const distPriceText = document.getElementById('fareResult').innerText.replace(/\n/g, ' ');
-    let msg = `*New Booking Inquiry*\nBrand: Speed Go Taxi\nMode: ${currentMode}\nName: ${name}\nTrip: ${document.getElementById('fromCity').value} to ${document.getElementById('toCity').value}\nKM: ${document.getElementById('manualKm').value}\nVehicle: ${document.getElementById('carSelect').options[document.getElementById('carSelect').selectedIndex].text}\n${distPriceText}`;
+    const fareInfo = document.getElementById('fareResult').innerText.replace(/\n/g, ' ');
+    let msg = `*New Booking - Speed Go Taxi*\nMode: ${currentMode}\nName: ${name}\nTrip: ${document.getElementById('fromCity').value} to ${document.getElementById('toCity').value}\nKM: ${document.getElementById('manualKm').value}\nVehicle: ${document.getElementById('carSelect').options[document.getElementById('carSelect').selectedIndex].text}\n${fareInfo}`;
     window.open(`https://wa.me/916369353761?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
